@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试</title>
+</head>
+
+<body>
+    <style id="demo2"></style>
+    <div id="demo"></div>
+    <div id="buttons">
+        <button id="btnPause">Pause</button>
+        <button id="btnPlay">Play</button>
+        <button id="btnSlow">Slow</button>
+        <button id="btnNormal">Normal</button>
+        <button id="btnFast">Fast</button>
+
+    </div>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        #buttons {
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            /* 竖着放 */
+            flex-direction: column;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        
+        #buttons>button {
+            margin-bottom: 10px;
+            padding: 4px 8px;
+            background-color: skyblue;
+        }
+        /* 每次点击都有颜色变换 */
+        
+        #btnPause:hover {
+            background-color: blue;
+        }
+        
+        #btnPlay:hover {
+            background-color: red;
+        }
+        
+        #btnSlow:hover {
+            background-color: pink;
+        }
+        
+        #btnNormal:hover {
+            background-color: greenyellow;
+        }
+        
+        #btnFast:hover {
+            background-color: purple;
+        }
+        
+        #demo2 {
+            display: none;
+        }
+        /* 效果使得在画PKQ的时候 固定在当前视窗 */
+        
+        #demo {
+            position: fixed;
+            height: 50vh;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border: 1px solid red;
+            overflow-y: auto;
+        }
+        /* 隐藏滚动条 */
+        
+        #demo::-webkit-scrollbar {
+            display: none;
+        }
+        
+        #html {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+        }
+    </style>
+    <div id="html">
+        <div class="skin">
+            <!-- 1.眼睛 -->
+            <div class="eye left">
+
+            </div>
+            <div class="eye right">
+
+            </div>
+            <!-- 2.鼻子 -->
+            <div class="nose">
+                <div class="yuan"></div>
+            </div>
+
+
+
+            <!-- 3.嘴巴 -->
+            <div class="mouth">
+                <div class="up">
+                    <div class="lip left"></div>
+                    <div class="lip right"></div>
+
+                </div>
+                <div class="down">
+                    <div class="yuan1">
+                        <div class="yuan2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4.脸颊 -->
+            <div class="face left">
+                <!-- <img src="./image/flash.gif" alt=""> -->
+            </div>
+            <div class="face right">
+                <!-- <img src="./image/flash.gif" alt=""> -->
+            </div>
+        </div>
+    </div>
+    <script src="test.js"></script>
+</body>
+
+</html>
